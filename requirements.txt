@@ -1,0 +1,2 @@
+# No Python dependencies currently required for this Node.js project.
+# Add libraries here if you integrate a Python backend later.

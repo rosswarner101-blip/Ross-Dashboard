@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-enterprise-50: #f0f9ff;
+  --color-enterprise-100: #e0f2fe;
+  --color-enterprise-200: #bae6fd;
+  --color-enterprise-300: #7dd3fc;
+  --color-enterprise-400: #38bdf8;
+  --color-enterprise-500: #0ea5e9;
+  --color-enterprise-600: #0284c7;
+  --color-enterprise-700: #0369a1;
+  --color-enterprise-800: #075985;
+  --color-enterprise-900: #0c4a6e;
+  --color-enterprise-950: #082f49;
+}
+
+@layer base {
+  body {
+    /* Using generic names if specific shades fail, but slate should be there as gray-something or I need to import it ? 
+       Tailwind 4 uses zinc/slate/etc as distinct?
+       Let's try generic gray first to be safe, or just hardcode for now to pass build.
+    */
+    background-color: var(--color-slate-50, #f8fafc);
+    color: var(--color-slate-900, #0f172a);
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Re-adding slate if missing by default in v4 (it might be named gray or zinc by default) */
+/* Actually v4 includes all colors usually? logic says yes. */
